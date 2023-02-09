@@ -37,12 +37,12 @@ public class WikipediaSteps {
         Assert.assertEquals(key, wikipediaPage.firstHeading.getText());
     }
 
-//    @Then("user should see below languages around the logo")
-//    public void user_should_see_below_languages_around_the_logo(DataTable languages) {
-//
-//        for (int i = 0; i < languages.asList().size(); i++) {
-//            System.out.println(languages.asList().get(i));
-//            Assert.assertEquals(languages.asList().get(i), wikipediaPage.mainLanguages.get(i).getText());
-//        }
-//    }
+    @Then("user should see below languages around the logo")
+    public void user_should_see_below_languages_around_the_logo(DataTable languages) {
+
+        for (int i = 0; i < languages.asList().size(); i++) {
+            System.out.println(languages.asList().get(i));
+            Assert.assertEquals(languages.asList().get(i), wikipediaPage.mainLanguages.get(i).getText());
+        }
+    }
 }

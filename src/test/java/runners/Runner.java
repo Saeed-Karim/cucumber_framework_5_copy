@@ -9,9 +9,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@WikiLanguages",
-        dryRun = true,
-        monochrome = false
+        tags = "@Login",
+        dryRun = false,
+        monochrome = false,
+        plugin = {"html:target/cucumber-reports",
+                "json:target/cucumber-reports/Cucumber.json",
+                "pretty"
+        }
 )
 public class Runner {
 }
